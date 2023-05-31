@@ -198,6 +198,9 @@
 let opcionCurso = prompt("Elija una opción de curso:\n1. Course\n2. Carrera\n3. Master");
 let beca = prompt("¿Cuenta con alguna beca?\n1. Beca Facebook\n2. Beca Google\n3. Beca Jesua\n4. No cuenta con beca");
 
+let precio_mensual = ""
+let precio_total = ""
+
 let precios = {
     "Course": 4999,
     "Carrera": 3999,
@@ -209,6 +212,115 @@ let duraciones = {
     "Carrera": 6,
     "Master": 12
   };
+  let becas = {
+    "Facebook": 0.2,
+    "Google": 0.15,
+    "Jesua": 0.5
+  };
+
+//   console.log(`control opcion ${opcionCurso}`);
+//   console.log(`control beca ${beca}`);
+if(opcionCurso === "Course"){
+  if(beca ==="Facebook"){
+    precio_mensual = precios.Course - (precios.Course*becas.Facebook);
+    // console.log(`control precio mensual ${precio_mensual}`);
+    precio_total = precio_mensual * duraciones.Course    
+    console.log(`precio mensual con descuento ${precio_mensual}`);
+    console.log(`precio total del curso ${precio_total}`);
+  }else if(beca ==="Google"){
+    precio_mensual = precios.Course - (precios.Course*becas.Google);
+    // console.log(`control precio mensual ${precio_mensual}`);
+    precio_total = precio_mensual * duraciones.Course    
+    console.log(`precio mensual con descuento ${precio_mensual}`);
+    console.log(`precio total del curso ${precio_total}`);
+  }else if(beca ==="Jesua"){
+    precio_mensual = precios.Course - (precios.Course*becas.Jesua);
+    // console.log(`control precio mensual ${precio_mensual}`);
+    precio_total = precio_mensual * duraciones.Course    
+    console.log(`precio mensual con descuento ${precio_mensual}`);
+    console.log(`precio total del curso ${precio_total}`);
+  } else if(beca ==="No Beca"){
+    precio_mensual =precios.Course;
+    precio_total = precio_mensual * duraciones.Course    
+    console.log(`precio mensual con descuento ${precio_mensual}`);
+    console.log(`precio total del curso ${precio_total}`);
+}    else  
+  {
+    precio_mensual =precios.Course;
+    precio_total = precio_mensual * duraciones.Course    
+    console.log(`precio mensual con descuento ${precio_mensual}`);
+    console.log(`precio total del curso ${precio_total}`);
+  }
+}
+else if(opcionCurso === "Carrera" ){
+    if(beca==="Facebook"){
+        precio_mensual = precios.Carrera - (precios.Carrera*becas.Facebook);
+        // console.log(`control precio mensual ${precio_mensual}`);
+        precio_total = precio_mensual * duraciones.Carrera    
+        console.log(`precio mensual con descuento ${precio_mensual}`);
+        console.log(`precio total del curso ${precio_total}`);
+      }else if(beca ==="Google"){
+        precio_mensual = precios.Carrera - (precios.Carrera*becas.Google);
+        // console.log(`control precio mensual ${precio_mensual}`);
+        precio_total = precio_mensual * duraciones.Carrera    
+        console.log(`precio mensual con descuento ${precio_mensual}`);
+        console.log(`precio total del curso ${precio_total}`);
+      }else if(beca ==="Jesua"){
+        precio_mensual = precios.Carrera - (precios.Carrera*becas.Jesua);
+        // console.log(`control precio mensual ${precio_mensual}`);
+        precio_total = precio_mensual * duraciones.Carrera    
+        console.log(`precio mensual con descuento ${precio_mensual}`);
+        console.log(`precio total del curso ${precio_total}`);
+      } else if(beca ==="No Beca"){
+        precio_mensual =precios.Carrera;
+        precio_total = precio_mensual * duraciones.Carrera    
+        console.log(`precio mensual con descuento ${precio_mensual}`);
+        console.log(`precio total del curso ${precio_total}`);
+    }    else  
+      {
+        precio_mensual =precios.Carrera;
+        precio_total = precio_mensual * duraciones.Carrera    
+        console.log(`precio mensual con descuento ${precio_mensual}`);
+        console.log(`precio total del curso ${precio_total}`);
+      }
+    }
+    else if(opcionCurso === "Master" ){
+        if(beca ==="Facebook"){
+            precio_mensual = precios.Master - (precios.Master*becas.Facebook);
+            // console.log(`control precio mensual ${precio_mensual}`);
+            precio_total = precio_mensual * duraciones.Master    
+            console.log(`precio mensual con descuento ${precio_mensual}`);
+            console.log(`precio total del curso ${precio_total}`);
+          }else if(beca ==="Google"){
+            precio_mensual = precios.Master - (precios.Master*becas.Google);
+            // console.log(`control precio mensual ${precio_mensual}`);
+            precio_total = precio_mensual * duraciones.Master    
+            console.log(`precio mensual con descuento ${precio_mensual}`);
+            console.log(`precio total del curso ${precio_total}`);
+          }else if(beca ==="Jesua"){
+            precio_mensual = precios.Master - (precios.Master*becas.Jesua);
+            // console.log(`control precio mensual ${precio_mensual}`);
+            precio_total = precio_mensual * duraciones.Master    
+            console.log(`precio mensual con descuento ${precio_mensual}`);
+            console.log(`precio total del curso ${precio_total}`);
+          } else if(beca ==="No Beca"){
+            precio_mensual =precios.Master;
+            precio_total = precio_mensual * duraciones.Master    
+            console.log(`precio mensual con descuento ${precio_mensual}`);
+            console.log(`precio total del curso ${precio_total}`);
+        }    else  
+          {
+            precio_mensual =precios.Master;
+            precio_total = precio_mensual * duraciones.Master    
+            console.log(`precio mensual con descuento ${precio_mensual}`);
+            console.log(`precio total del curso ${precio_total}`);
+          }
+        }
+        else{
+            console.log(`Opción no valida`);
+        }
+
+
 //   console.log(`${precios} y ${duraciones} `)
 
 // 11.Realizar un programa que ayude a calcular el total a pagar de acuerdo a la
