@@ -195,130 +195,130 @@
 // ● Carrera 6 meses
 // ● Master: 12 meses
 
-let opcionCurso = prompt("Elija una opción de curso:\n1. Course\n2. Carrera\n3. Master");
-let beca = prompt("¿Cuenta con alguna beca?\n1. Beca Facebook\n2. Beca Google\n3. Beca Jesua\n4. No cuenta con beca");
+// let opcionCurso = prompt("Elija una opción de curso:\n1. Course\n2. Carrera\n3. Master");
+// let beca = prompt("¿Cuenta con alguna beca?\n1. Beca Facebook\n2. Beca Google\n3. Beca Jesua\n4. No cuenta con beca");
 
-let precio_mensual = ""
-let precio_total = ""
+// let precio_mensual = ""
+// let precio_total = ""
 
-let precios = {
-    "Course": 4999,
-    "Carrera": 3999,
-    "Master": 2999
-  };
+// let precios = {
+//     "Course": 4999,
+//     "Carrera": 3999,
+//     "Master": 2999
+//   };
 
-let duraciones = {
-    "Course": 2,
-    "Carrera": 6,
-    "Master": 12
-  };
-  let becas = {
-    "Facebook": 0.2,
-    "Google": 0.15,
-    "Jesua": 0.5
-  };
+// let duraciones = {
+//     "Course": 2,
+//     "Carrera": 6,
+//     "Master": 12
+//   };
+//   let becas = {
+//     "Facebook": 0.2,
+//     "Google": 0.15,
+//     "Jesua": 0.5
+//   };
 
-//   console.log(`control opcion ${opcionCurso}`);
-//   console.log(`control beca ${beca}`);
-if(opcionCurso === "Course"){
-  if(beca ==="Facebook"){
-    precio_mensual = precios.Course - (precios.Course*becas.Facebook);
-    // console.log(`control precio mensual ${precio_mensual}`);
-    precio_total = precio_mensual * duraciones.Course    
-    console.log(`precio mensual con descuento ${precio_mensual}`);
-    console.log(`precio total del curso ${precio_total}`);
-  }else if(beca ==="Google"){
-    precio_mensual = precios.Course - (precios.Course*becas.Google);
-    // console.log(`control precio mensual ${precio_mensual}`);
-    precio_total = precio_mensual * duraciones.Course    
-    console.log(`precio mensual con descuento ${precio_mensual}`);
-    console.log(`precio total del curso ${precio_total}`);
-  }else if(beca ==="Jesua"){
-    precio_mensual = precios.Course - (precios.Course*becas.Jesua);
-    // console.log(`control precio mensual ${precio_mensual}`);
-    precio_total = precio_mensual * duraciones.Course    
-    console.log(`precio mensual con descuento ${precio_mensual}`);
-    console.log(`precio total del curso ${precio_total}`);
-  } else if(beca ==="No Beca"){
-    precio_mensual =precios.Course;
-    precio_total = precio_mensual * duraciones.Course    
-    console.log(`precio mensual con descuento ${precio_mensual}`);
-    console.log(`precio total del curso ${precio_total}`);
-}    else  
-  {
-    precio_mensual =precios.Course;
-    precio_total = precio_mensual * duraciones.Course    
-    console.log(`precio mensual con descuento ${precio_mensual}`);
-    console.log(`precio total del curso ${precio_total}`);
-  }
-}
-else if(opcionCurso === "Carrera" ){
-    if(beca==="Facebook"){
-        precio_mensual = precios.Carrera - (precios.Carrera*becas.Facebook);
-        // console.log(`control precio mensual ${precio_mensual}`);
-        precio_total = precio_mensual * duraciones.Carrera    
-        console.log(`precio mensual con descuento ${precio_mensual}`);
-        console.log(`precio total del curso ${precio_total}`);
-      }else if(beca ==="Google"){
-        precio_mensual = precios.Carrera - (precios.Carrera*becas.Google);
-        // console.log(`control precio mensual ${precio_mensual}`);
-        precio_total = precio_mensual * duraciones.Carrera    
-        console.log(`precio mensual con descuento ${precio_mensual}`);
-        console.log(`precio total del curso ${precio_total}`);
-      }else if(beca ==="Jesua"){
-        precio_mensual = precios.Carrera - (precios.Carrera*becas.Jesua);
-        // console.log(`control precio mensual ${precio_mensual}`);
-        precio_total = precio_mensual * duraciones.Carrera    
-        console.log(`precio mensual con descuento ${precio_mensual}`);
-        console.log(`precio total del curso ${precio_total}`);
-      } else if(beca ==="No Beca"){
-        precio_mensual =precios.Carrera;
-        precio_total = precio_mensual * duraciones.Carrera    
-        console.log(`precio mensual con descuento ${precio_mensual}`);
-        console.log(`precio total del curso ${precio_total}`);
-    }    else  
-      {
-        precio_mensual =precios.Carrera;
-        precio_total = precio_mensual * duraciones.Carrera    
-        console.log(`precio mensual con descuento ${precio_mensual}`);
-        console.log(`precio total del curso ${precio_total}`);
-      }
-    }
-    else if(opcionCurso === "Master" ){
-        if(beca ==="Facebook"){
-            precio_mensual = precios.Master - (precios.Master*becas.Facebook);
-            // console.log(`control precio mensual ${precio_mensual}`);
-            precio_total = precio_mensual * duraciones.Master    
-            console.log(`precio mensual con descuento ${precio_mensual}`);
-            console.log(`precio total del curso ${precio_total}`);
-          }else if(beca ==="Google"){
-            precio_mensual = precios.Master - (precios.Master*becas.Google);
-            // console.log(`control precio mensual ${precio_mensual}`);
-            precio_total = precio_mensual * duraciones.Master    
-            console.log(`precio mensual con descuento ${precio_mensual}`);
-            console.log(`precio total del curso ${precio_total}`);
-          }else if(beca ==="Jesua"){
-            precio_mensual = precios.Master - (precios.Master*becas.Jesua);
-            // console.log(`control precio mensual ${precio_mensual}`);
-            precio_total = precio_mensual * duraciones.Master    
-            console.log(`precio mensual con descuento ${precio_mensual}`);
-            console.log(`precio total del curso ${precio_total}`);
-          } else if(beca ==="No Beca"){
-            precio_mensual =precios.Master;
-            precio_total = precio_mensual * duraciones.Master    
-            console.log(`precio mensual con descuento ${precio_mensual}`);
-            console.log(`precio total del curso ${precio_total}`);
-        }    else  
-          {
-            precio_mensual =precios.Master;
-            precio_total = precio_mensual * duraciones.Master    
-            console.log(`precio mensual con descuento ${precio_mensual}`);
-            console.log(`precio total del curso ${precio_total}`);
-          }
-        }
-        else{
-            console.log(`Opción no valida`);
-        }
+// //   console.log(`control opcion ${opcionCurso}`);
+// //   console.log(`control beca ${beca}`);
+// if(opcionCurso === "Course"){
+//   if(beca ==="Facebook"){
+//     precio_mensual = precios.Course - (precios.Course*becas.Facebook);
+//     // console.log(`control precio mensual ${precio_mensual}`);
+//     precio_total = precio_mensual * duraciones.Course    
+//     console.log(`precio mensual con descuento ${precio_mensual}`);
+//     console.log(`precio total del curso ${precio_total}`);
+//   }else if(beca ==="Google"){
+//     precio_mensual = precios.Course - (precios.Course*becas.Google);
+//     // console.log(`control precio mensual ${precio_mensual}`);
+//     precio_total = precio_mensual * duraciones.Course    
+//     console.log(`precio mensual con descuento ${precio_mensual}`);
+//     console.log(`precio total del curso ${precio_total}`);
+//   }else if(beca ==="Jesua"){
+//     precio_mensual = precios.Course - (precios.Course*becas.Jesua);
+//     // console.log(`control precio mensual ${precio_mensual}`);
+//     precio_total = precio_mensual * duraciones.Course    
+//     console.log(`precio mensual con descuento ${precio_mensual}`);
+//     console.log(`precio total del curso ${precio_total}`);
+//   } else if(beca ==="No Beca"){
+//     precio_mensual =precios.Course;
+//     precio_total = precio_mensual * duraciones.Course    
+//     console.log(`precio mensual con descuento ${precio_mensual}`);
+//     console.log(`precio total del curso ${precio_total}`);
+// }    else  
+//   {
+//     precio_mensual =precios.Course;
+//     precio_total = precio_mensual * duraciones.Course    
+//     console.log(`precio mensual con descuento ${precio_mensual}`);
+//     console.log(`precio total del curso ${precio_total}`);
+//   }
+// }
+// else if(opcionCurso === "Carrera" ){
+//     if(beca==="Facebook"){
+//         precio_mensual = precios.Carrera - (precios.Carrera*becas.Facebook);
+//         // console.log(`control precio mensual ${precio_mensual}`);
+//         precio_total = precio_mensual * duraciones.Carrera    
+//         console.log(`precio mensual con descuento ${precio_mensual}`);
+//         console.log(`precio total del curso ${precio_total}`);
+//       }else if(beca ==="Google"){
+//         precio_mensual = precios.Carrera - (precios.Carrera*becas.Google);
+//         // console.log(`control precio mensual ${precio_mensual}`);
+//         precio_total = precio_mensual * duraciones.Carrera    
+//         console.log(`precio mensual con descuento ${precio_mensual}`);
+//         console.log(`precio total del curso ${precio_total}`);
+//       }else if(beca ==="Jesua"){
+//         precio_mensual = precios.Carrera - (precios.Carrera*becas.Jesua);
+//         // console.log(`control precio mensual ${precio_mensual}`);
+//         precio_total = precio_mensual * duraciones.Carrera    
+//         console.log(`precio mensual con descuento ${precio_mensual}`);
+//         console.log(`precio total del curso ${precio_total}`);
+//       } else if(beca ==="No Beca"){
+//         precio_mensual =precios.Carrera;
+//         precio_total = precio_mensual * duraciones.Carrera    
+//         console.log(`precio mensual con descuento ${precio_mensual}`);
+//         console.log(`precio total del curso ${precio_total}`);
+//     }    else  
+//       {
+//         precio_mensual =precios.Carrera;
+//         precio_total = precio_mensual * duraciones.Carrera    
+//         console.log(`precio mensual con descuento ${precio_mensual}`);
+//         console.log(`precio total del curso ${precio_total}`);
+//       }
+//     }
+//     else if(opcionCurso === "Master" ){
+//         if(beca ==="Facebook"){
+//             precio_mensual = precios.Master - (precios.Master*becas.Facebook);
+//             // console.log(`control precio mensual ${precio_mensual}`);
+//             precio_total = precio_mensual * duraciones.Master    
+//             console.log(`precio mensual con descuento ${precio_mensual}`);
+//             console.log(`precio total del curso ${precio_total}`);
+//           }else if(beca ==="Google"){
+//             precio_mensual = precios.Master - (precios.Master*becas.Google);
+//             // console.log(`control precio mensual ${precio_mensual}`);
+//             precio_total = precio_mensual * duraciones.Master    
+//             console.log(`precio mensual con descuento ${precio_mensual}`);
+//             console.log(`precio total del curso ${precio_total}`);
+//           }else if(beca ==="Jesua"){
+//             precio_mensual = precios.Master - (precios.Master*becas.Jesua);
+//             // console.log(`control precio mensual ${precio_mensual}`);
+//             precio_total = precio_mensual * duraciones.Master    
+//             console.log(`precio mensual con descuento ${precio_mensual}`);
+//             console.log(`precio total del curso ${precio_total}`);
+//           } else if(beca ==="No Beca"){
+//             precio_mensual =precios.Master;
+//             precio_total = precio_mensual * duraciones.Master    
+//             console.log(`precio mensual con descuento ${precio_mensual}`);
+//             console.log(`precio total del curso ${precio_total}`);
+//         }    else  
+//           {
+//             precio_mensual =precios.Master;
+//             precio_total = precio_mensual * duraciones.Master    
+//             console.log(`precio mensual con descuento ${precio_mensual}`);
+//             console.log(`precio total del curso ${precio_total}`);
+//           }
+//         }
+//         else{
+//             console.log(`Opción no valida`);
+//         }
 
 
 //   console.log(`${precios} y ${duraciones} `)
@@ -334,3 +334,29 @@ else if(opcionCurso === "Carrera" ){
 // total a pagar = (precio kilometro x kms recorridos) + extra por litros
 // consumidos
 
+let tipoVehiculo = prompt("Elija una opción de vehiculo:\n1. coche\n2. moto\n3. autobus");
+let kmsRecorridos = prompt("Ingrese km recorridos");
+let ltsConsumidos = prompt("Ingrese litros consumidos");
+let precioKm =""
+
+if (tipoVehiculo === "coche") {
+    precioKm = 0.20;
+  } else if (tipoVehiculo === "moto") {
+    precioKm = 0.10;
+  } else if (tipoVehiculo === "autobús") {
+    precioKm = 0.5;
+  }
+  let totalPagar = precioKm * kmsRecorridos;
+  console.log(`${precioKm}`)
+  console.log(`${kmsRecorridos}`)
+
+  if (ltsConsumidos <= 100) {
+    totalPagar += 5; // Añade 5 al costo total si los litros están entre 0 y 100
+    console.log(`${totalPagar}`)
+  } else {
+    totalPagar += 10; // Añade 10 al costo total si los litros son mayores a 100
+    console.log(`${totalPagar}`)
+  }
+  
+
+  console.log(`Este es el valor a cancelar${totalPagar}`)
