@@ -356,7 +356,5 @@ if (tipoVehiculo === "coche") {
   } else {
     totalPagar += 10; // Añade 10 al costo total si los litros son mayores a 100
     console.log(`${totalPagar}`)
-  }
-  
-
+  }  
   console.log(`Este es el valor a cancelar${totalPagar}`)
