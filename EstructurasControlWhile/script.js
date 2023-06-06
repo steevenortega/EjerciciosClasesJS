@@ -38,7 +38,7 @@
 //             console.log(i);
 //             i = i+1;          
 //           }    
-          
+
 //         }    
 //     }
 //     else
@@ -76,14 +76,14 @@
 
 // while (true) {
 //   let entrada = prompt("Ingrese una letra o palabra (deje vacío para terminar):");
-  
-    
+
+
 //   if (entrada === "") {
 //     break; 
 //   }
-  
+
 //     palabras.push(entrada);
-  
+
 // }
 
 // console.log("Palabras capturadas:", palabras);
@@ -95,3 +95,44 @@
 // 5. Crea un programa que solicite al usuario un día de la semana (ej: lunes, jueves, domingo, etc). El programa mostrará un mensaje personalizado 
 // para cada día de la semana por medio de un alert. Y seguirá pidiendo al usuario introducir otro día. En caso de que el día introducido sea domingo 
 // mostrar al usuario el mensaje “Ve a descansar” y terminar la captura de información.
+
+// while (true) {
+//     let dia = prompt("Introduce un día de la semana:");
+
+//     if (dia.toLowerCase() === "domingo") {
+//         alert("Ve a descansar");
+//         break;
+//     }
+
+//     else if (dia.toLowerCase() === "lunes") {
+//         alert("¡Iniciando semana con toda!");
+//         break;
+//     }
+//     else if (dia.toLowerCase() === "martes") {
+//         alert("¡Martes, pero a que costo!");
+//         break;
+//     }
+//     else if (dia.toLowerCase() === "miercoles") {
+//         alert("Mitad de semana, ¡ya casi es viernes!");
+//         break;
+//     }
+//     else if (dia.toLowerCase() === "jueves") {
+//         alert("¡Epa, Juernes");
+//         break;
+//     }
+//     else if (dia.toLowerCase() === "viernes") {
+//         alert("Como fue hoy");
+//         break;
+//     }
+//     else if (dia.toLowerCase() === "sabado") {
+//         alert("Full descanso y familia");
+//         break;
+//     }
+//     else {
+//         alert("Día no reconocido. Por favor, introduce un día válido.");
+//         break;
+
+//     }
+
+// }
+  
