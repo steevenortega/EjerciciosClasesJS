@@ -17,7 +17,6 @@
 // }
 // }
 
-
 // 2. Crea un programa que solicite al usuario 2 números entre 1 y 50. Posteriormente mostrar en consola los números del 1 hasta el 50, pero añadir
 //  el mensaje “¡Lotería!” solo al mostrar los números indicados por el usuario.
 
@@ -51,7 +50,20 @@
 // 3. Crea un programa que solicite al usuario números, si lo que este introduce es un número guardarlo en un arreglo. Para terminar el capturar el usuario 
 // debe ingresar el número 0. Finalmente mostrar la lista de números capturados en pantalla o en la consola.
 
+// const numeros = [];
 
+
+// // let numero = 8;
+// while (true){
+//     let numero = parseInt(prompt("Ingrese numeros, ingrese 0 para terminar"));
+// if(numero === 0){
+//     break;
+// }
+// if(!isNaN(numero)){
+//     numeros.push(numero);
+// }
+// }
+// console.log(`Este es el arreglo:" ${numeros}`);
 
 
 
@@ -59,7 +71,24 @@
 // 4. Crea un programa que solicite al usuario letras o palabras, si es así guardar el resultado. Para terminar de capturar el usuario no debe escribir 
 // valor alguno. Al terminar de capturar, mostrar en pantalla la concatenación de todas las palabras capturadas.
 
+// const palabras = [];
 
+
+// while (true) {
+//   let entrada = prompt("Ingrese una letra o palabra (deje vacío para terminar):");
+  
+    
+//   if (entrada === "") {
+//     break; 
+//   }
+  
+//     palabras.push(entrada);
+  
+// }
+
+// console.log("Palabras capturadas:", palabras);
+// var palabrasFinal = palabras.join(" "); // este es el separados de los elementos del array
+// console.log("Palabras capturadas:", palabrasFinal);
 
 
 
