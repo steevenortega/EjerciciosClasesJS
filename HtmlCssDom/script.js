@@ -4,95 +4,57 @@ const productos = {
     Emocion: 180,
     Alegria: 160,
     Frescura: 150
-  };
-// Crear un objeto para almacenar las ventas de cada vendedor configuracion de get and set
-const ventas = {
-    Juana: {
-      Aqua: 0,
-      Emocion: 0,
-      Alegria: 0,
-      Frescura: 0,
-      total: 0
-    },
-    Pedro: {
-      Aqua: 0,
-      Emocion: 0,
-      Alegria: 0,
-      Frescura: 0,
-      total: 0
+};
+
+const ventasJuana = () => {
+    let ventas = {
+        Juana: {
+            Aqua: prompt("Ingrese cantidad de productos vendidos de Aqua para Juana"),
+            Emocion: prompt("Ingrese cantidad de productos vendidos de Emocion para Juana"),
+            Alegria: prompt("Ingrese cantidad de productos vendidos de Alegria para Juana"),
+            Frescura: prompt("Ingrese cantidad de productos vendidos de Frescura para Juana")
+        }
     }
-  };
-// Registrar las ventas de cada vendedor y cargue de data
+    return ventas.Juana;
+}
 
-// let vendedor = prompt("Ingresa el nombre del vendedor 1. Juana 2. Pedro");
-// if (vendedor===Juana){
-//      ventas.Juana.Aqua  = prompt("Ingrese cantidad de productos vendidos de Aqua");
-//      ventas.Juana.Emocion  = prompt("Ingrese cantidad de productos vendidos de Emocion");
-//      ventas.Juana.Alegria  = prompt("Ingrese cantidad de productos vendidos de Alegria");
-//      ventas.Juana.Frescura  = prompt("Ingrese cantidad de productos vendidos de Frescura");
-
-function ventasJuana(){
-    let Juana = new Object();
-     ventas.Juana.Aqua  = 5;
-     ventas.Juana.Emocion  = 3;
-     ventas.Juana.Alegria  = 7;
-     ventas.Juana.Frescura  = 4;         
-     return ventas.Juana;
+const ventasPedro = () => {
+    let ventas = {
+        Pedro: {
+            Aqua: prompt("Ingrese cantidad de productos vendidos de Aqua para Pedro"),
+            Emocion: prompt("Ingrese cantidad de productos vendidos de Emocion para Pedro"),
+            Alegria: prompt("Ingrese cantidad de productos vendidos de Alegria para Pedro"),
+            Frescura: prompt("Ingrese cantidad de productos vendidos de Frescura para Pedro")
+        }
     }
-
-// }else if (vendedor===Pedro){
-//      ventas.Pedro.Aqua  = prompt("Ingrese cantidad de productos vendidos de Aqua");
-//      ventas.Pedro.Emocion  = prompt("Ingrese cantidad de productos vendidos de Emocion");
-//      ventas.Pedro.Alegria  = prompt("Ingrese cantidad de productos vendidos de Alegria");
-//      ventas.Pedro.Frescura  = prompt("Ingrese cantidad de productos vendidos de Frescura");
-
-
-function ventasPedro(){
-    let Pedro = new Object();
-    ventas.Pedro.Aqua  = 2;
-    ventas.Pedro.Emocion  = 2;
-    ventas.Pedro.Alegria  = 2;
-    ventas.Pedro.Frescura  = 2;  
-    
     return ventas.Pedro;
 }
-    
-// }
-// else{
-//     console.log('Este vendedor no se encuentra en la base de datos');
-// }
-//Calcular la suma total de dinero recolectado por cada vendedor
-// function calculoDineroRecolectado(ventasUsuario){
 
-//     for (let vendedor in ventasUsuario) {
-//         let total = 0; // permite terminar la lectura del objeto
-//         for (let producto in ventasUsuario[vendedor]) {
-//           if (producto !== 'total') {
-//             total += ventas[vendedor][producto] * productos[producto];
-//           }
-//         }
-//         // ventas[vendedor].total = total;
-//         ventas[vendedor].total = total;
-//         return ventas[vendedor].total;
-//       }
-
-// }
-
-
-function calculoDineroRecolectado(ventasUsuario){
-
-   console.log(ventasUsuario);
-   const resultado = {Aqua: 0, Emocion: 0, Alegria: 0, Frescura: 0, total: 0};
-   for (let producto in productos) {
-    resultado[producto] += productos[producto] * ventasUsuario[producto];
-    console.log(producto);
-    resultado.total += resultado[producto]
-    console.log(resultado.total);
-   }
-
-   return resultado;
+function calculoDineroRecolectado(ventasUsuario) {
+    console.log(ventasUsuario);
+    const resultado = { Aqua: 0, Emocion: 0, Alegria: 0, Frescura: 0, total: 0 };
+    for (let producto in productos) {
+        resultado[producto] += productos[producto] * ventasUsuario[producto];
+        console.log(producto);
+        resultado.total += resultado[producto]
+        console.log(resultado.total);
+    }
+    return resultado;
 }
 
+function empleadoDelMes(ventasTotalesUsuario1, ventasTotalesUsuario2) {
+    let emmpleadoDelMes_ = "";
+    if (ventasTotalesUsuario1 > ventasTotalesUsuario2) {
+        emmpleadoDelMes_ = "El vendedor del mes es Pedro";
+
+    } else if (ventasTotalesUsuario1 < ventasTotalesUsuario2) {
+        emmpleadoDelMes_ = "El vendedor del mes es Juana";
+    }
+    else {
+        emmpleadoDelMes_ = "Hay un empate en ventas";
+    }
+    return emmpleadoDelMes_;
+}
 
 let ventasPedro_ = ventasPedro();
 let ventasTotalesUsuario1 = calculoDineroRecolectado(ventasPedro_);
@@ -100,8 +62,10 @@ console.log(ventasTotalesUsuario1);
 let ventasJuana_ = ventasJuana();
 let ventasTotalesUsuario2 = calculoDineroRecolectado(ventasJuana_);
 console.log(ventasTotalesUsuario2);
+let emmpleadoDelMes_F = empleadoDelMes(ventasTotalesUsuario1.total, ventasTotalesUsuario2.total);
+console.log(emmpleadoDelMes_F);
 
-// calculoDineroRecolectado(Pedro);
+
 
 
 
