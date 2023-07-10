@@ -2,6 +2,9 @@
 
 let variable = '';
 let saldoMali = 400;
+let saldoGera = 290;
+let saldoMaui = 67;
+
 
   function selectAccount(accountId) {
 
@@ -37,9 +40,52 @@ let saldoMali = 400;
 
       } 
       
-      else {
-        console.log('numero no corresponde');
+      else if (usuario === "2") {
+
+    let contraUser2 = prompt("Ingrese la contraseña de su cuenta").toString();    
+    console.log(contraUser2);
+    let contrasenaValida = validarContrasena(contraUser2).toString();
+    console.log(contrasenaValida);
+    // contrasenaValida ="true" ;
+    // contraUser1 ="Abcd1234" ;
+
+      if (contrasenaValida === "true" && contraUser2 === "Efgh1234" ) {
+          console.log('La contraseña es válida');
+          document.getElementById("selectedAccount").textContent = "Persona " + accountId;
+          document.getElementById("accounts").style.display = "none";
+          document.getElementById("interaction").style.display = "block"; 
+          variable = usuario;
+          return variable;
+          
       }
+      
+      else{
+        console.log('La contraseña es inválida');
+      } 
+    }  
+      else if (usuario === "3") {
+
+        let contraUser2 = prompt("Ingrese la contraseña de su cuenta").toString();    
+        console.log(contraUser2);
+        let contrasenaValida = validarContrasena(contraUser2).toString();
+        console.log(contrasenaValida);
+        // contrasenaValida ="true" ;
+        // contraUser1 ="Abcd1234" ;
+    
+          if (contrasenaValida === "true" && contraUser2 === "Ijkl1234" ) {
+              console.log('La contraseña es válida');
+              document.getElementById("selectedAccount").textContent = "Persona " + accountId;
+              document.getElementById("accounts").style.display = "none";
+              document.getElementById("interaction").style.display = "block"; 
+              variable = usuario;
+              return variable;
+              
+          }
+          else{
+            console.log('La contraseña es inválida');
+          } 
+
+      } 
   
 
     } 
@@ -47,7 +93,7 @@ let saldoMali = 400;
 function retiro() {  
   let variable_ = variable;
   //let usuario = accountId.toString();
-  if(variable_ === "1"){
+  if(variable_ === "1" && saldoMali > "10"){
     // let saldoMali = 400;
     console.log(saldoMali);  
     let amountR = prompt("Ingrese la cantidad a retirar:");
@@ -57,16 +103,39 @@ function retiro() {
     // Resto del código para realizar la transacción
     alert("Retiro exitoso");
     return saldoMali;
+        
+  }
+  if(variable_ === "2" && saldoGera > "10"){
+    // let saldoMali = 400;
+    console.log(saldoGera);  
+    let amountR = prompt("Ingrese la cantidad a retirar:");
+    let amountR_ = parseInt(amountR);
+    saldoGera = saldoGera-amountR_;  
+    console.log(saldoGera);  
+    // Resto del código para realizar la transacción
+    alert("Retiro exitoso");
+    return saldoGera;
+  }
+  if(variable_ === "3" && saldoMaui > "10"){
+    // let saldoMali = 400;
+    console.log(saldoMaui);  
+    let amountR = prompt("Ingrese la cantidad a retirar:");
+    let amountR_ = parseInt(amountR);
+    saldoMaui = saldoMaui-amountR_;  
+    console.log(saldoMaui);  
+    // Resto del código para realizar la transacción
+    alert("Retiro exitoso");
+    return saldoMaui;
   }
   else{
-    console.log("no se quien es");
+    alert("El saldo de la cuenta incumple con las politicas para continuar");
   }
  
 }
   function deposit() {
     let variable_ = variable;
     //let usuario = accountId.toString();
-    if(variable_ === "1"){
+    if(variable_ === "1" && saldoMali <= "990"){
       // let saldoMali = 400;
       console.log(saldoMali);  
       let amountS = prompt("Ingrese la cantidad a depositar:");
@@ -77,13 +146,31 @@ function retiro() {
       alert("Deposito exitoso");
       return saldoMali;
     }
-    else{
-      console.log("no se quien es");
+    if(variable_ === "2" && saldoGera <= "990"){
+      // let saldoMali = 400;
+      console.log(saldoGera);  
+      let amountS = prompt("Ingrese la cantidad a depositar:");
+      let amountS_ = parseInt(amountS);
+      saldoGera = saldoGera+amountS_;  
+      console.log(saldoGera);  
+      // Resto del código para realizar la transacción
+      alert("Deposito exitoso");
+      return saldoGera;
     }
-    // Lógica para depositar dinero en la cuenta seleccionada
-    let amount = prompt("Ingrese la cantidad a depositar:");
-    // Resto del código para realizar la transacción
-    alert("Depósito exitoso");
+    if(variable_ === "3" && saldoMaui <= "990"){
+      // let saldoMali = 400;
+      console.log(saldoMaui);  
+      let amountS = prompt("Ingrese la cantidad a depositar:");
+      let amountS_ = parseInt(amountS);
+      saldoMaui = saldoMaui+amountS_;  
+      console.log(saldoMaui);  
+      // Resto del código para realizar la transacción
+      alert("Deposito exitoso");
+      return saldoMaui;
+    }
+    else{
+      alert("El saldo de la cuenta incumple con las politicas para continuar");
+    }  
   }
 
   function checkBalance() {
@@ -94,8 +181,11 @@ function retiro() {
 
     document.getElementById("balance").textContent = "Saldo disponible: $" + saldoMali;
   }
-  else{
-    console.log("aun no se que hacer");
+  else if(variable_ === "2") {
+    document.getElementById("balance").textContent = "Saldo disponible: $" + saldoGera;
+  }
+  else if(variable_ === "3") {
+    document.getElementById("balance").textContent = "Saldo disponible: $" + saldoMaui;
   }
 }
 
